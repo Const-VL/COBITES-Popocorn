@@ -29,22 +29,59 @@ body {
     font-weight: bold;
 }
 
-.navbar ul {
+.nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    gap: 20px;
 }
 
-.navbar ul li {
-    margin: 0 15px;
+.nav-links li {
+    display: inline;
 }
 
-.navbar ul li a {
+.nav-links a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
+/* Tombol menu untuk HP */
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+
+/* Home */
 section {
     padding: 40px;
     text-align: center;
@@ -54,6 +91,7 @@ section {
 .menu-items {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -68,6 +106,7 @@ section {
     height: auto;
 }
 
+/* Contact Form */
 .contact form {
     max-width: 400px;
     margin: auto;
@@ -82,7 +121,7 @@ section {
 
 .contact input,
 .contact textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
@@ -90,6 +129,7 @@ section {
 }
 
 .contact button {
+  width: 99%;
     background: #f39c12;
     color: white;
     padding: 10px;
@@ -108,4 +148,4 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-}
+}}
