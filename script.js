@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Form Contact
     document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Mencegah reload halaman
+     
         
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
